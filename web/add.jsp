@@ -4,6 +4,9 @@
     Author     : Vivek
 --%>
 
+<%@page import="java.lang.String"%>
+<%@page import="java.util.Map"%>
+<%@page import="java.util.List"%>
 <%@page import="com.somendra.hibernate.Employee"%>
 <%@page import="org.hibernate.Session"%>
 <%@page import="org.hibernate.SessionFactory"%>
@@ -33,9 +36,9 @@
          //create object of model/pojo class  
          Employee emp=new Employee();
          //set all required value
-         emp.setEmpId(id);
-         emp.setName(name);
-         emp.setSalary(salary);
+      //   emp.setEmpId(id);
+       //  emp.setName(name);
+       //  emp.setSalary(salary);
          
 //hibernateing.............started
         //step1
@@ -43,17 +46,28 @@ SessionFactory sessionFactory=HibernateUtil.getSessionFactory();
 //step2
 Session hsession = sessionFactory.openSession();
 //step3
+
 hsession.beginTransaction();
 //step4
+
 // this would save the table object into the database
-hsession.save(emp);
+//hsession.save(emp);
+
+emp=(Employee)hsession.get(Employee.class, id);
+
+//emp.setName(name);
+//hsession.update(emp);
+hsession.delete(emp);
 //step5
 hsession.getTransaction().commit();
 //step6
 //hsession.close();
 //step7
 //sessionFactory.close();
-        
+     
+ 
+    
+   
         %>
         
     </body>
