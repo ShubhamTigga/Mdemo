@@ -5,9 +5,9 @@
        <!-- Database connection settings -->
     <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
     <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5433/hdemo</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/product</property>
     <property name="hibernate.connection.username">postgres</property>
-    <property name="hibernate.connection.password">Csaadmin@13</property>
+    <property name="hibernate.connection.password">fssai</property>
   <!-- JDBC connection pool (use the built-in) -->
         <property name="connection.pool_size">1</property>
         

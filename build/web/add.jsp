@@ -36,9 +36,9 @@
          //create object of model/pojo class  
          Employee emp=new Employee();
          //set all required value
-      //   emp.setEmpId(id);
-       //  emp.setName(name);
-       //  emp.setSalary(salary);
+         emp.setEmpId(id);
+         emp.setName(name);
+         emp.setSalary(salary);
          
 //hibernateing.............started
         //step1
@@ -51,13 +51,13 @@ hsession.beginTransaction();
 //step4
 
 // this would save the table object into the database
-//hsession.save(emp);
+hsession.save(emp);
 
-emp=(Employee)hsession.get(Employee.class, id);
+//emp=(Employee)hsession.get(Employee.class, id);
 
 //emp.setName(name);
 //hsession.update(emp);
-hsession.delete(emp);
+//hsession.delete(emp);
 //step5
 hsession.getTransaction().commit();
 //step6

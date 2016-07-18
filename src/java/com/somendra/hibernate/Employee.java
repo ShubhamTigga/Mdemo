@@ -13,8 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+
 
 /**
  *
@@ -29,10 +28,10 @@ public class Employee implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @NotNull
+    
     @Column(name = "emp_id")
     private Integer empId;
-    @Size(max = 30)
+    
     @Column(name = "name")
     private String name;
     @Column(name = "salary")
